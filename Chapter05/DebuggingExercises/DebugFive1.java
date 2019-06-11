@@ -3,8 +3,10 @@
 // Burger and hot dog are $2.59
 // Grilled cheese and fish are $1.99
 // Fries are 89 cents
-import javax.swing.*;
-public class DebugFive1
+//VVV corrected VVV
+
+import javax.swing.JOptionPane;
+public class Debug5
 {
    public static void main(String args[]) throws Exception
    {
@@ -17,16 +19,18 @@ public class DebugFive1
       usersChoiceString = JOptionPane.showInputDialog(null,
          "Order please\n1 - Burger\n2 - Hotdog" +
          "\n3 - Grilled cheese\n4 - Fish sandwich");
-      usersChoice= Integer.parseInt(usersChoice);
-      if(usersChoice == 1 && usersChoice == 2)
+      if(usersChoiceString == "1" || usersChoiceString == "2") {
          bill = bill + LOW_PRICE;
-      else
-         bill = bill - MED_PRICE;
+      }
+      else {
+    	  bill = bill + MED_PRICE;
+      }
       usersChoiceString = JOptionPane.showInputDialog(null,
           "Fries with that?\n1 - Yes\n2 - No");
-      usersChoice = Integer.parse(usersChoiceString);
-      if (usersChoice == 1);
+
+      if (usersChoiceString == "1");
           bill = bill + LOW_PRICE;
       JOptionPane.showMessageDialog(null,"Bill is " + bill);
    }
 }
+
