@@ -28,7 +28,7 @@ public class Debug5
           output = "Item number too high";
           System.out.println(output);
         }
-        if(item <= HIGH && item > CUTOFF) {
+        if(item <= HIGH && item >= CUTOFF) {
           output = "Valid - in Automotive Department";
           System.out.println(output);
         }
