@@ -23,17 +23,16 @@ public class Debug5
          output = "Item number too low";
          System.out.println(output);
       }
-      else
-        if(item > HIGH) {
+      else if(item > HIGH) {
           output = "Item number too high";
           System.out.println(output);
         }
-        if(item <= HIGH && item >= CUTOFF) {
-          output = "Valid - in Automotive Department";
+      else if(item <= HIGH && item >= CUTOFF) {
+          output = "Valid - Item in Housewares Department";
           System.out.println(output);
         }
-        if(item >= LOW && item < CUTOFF) {
-          output = "Valid - Item in Housewares Department";
+      else if(item >= LOW && item < CUTOFF) {
+          output = "Valid - in Automotive Department";
           System.out.println(output);
         }
 
