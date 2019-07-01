@@ -9,20 +9,21 @@ public class DebugEight4
       String array[] = new String[100];
       String entry;
       final String STOP = "XXX";
-      StringBuffer message = new
-          StringBuffer("The words in reverse order are\n");
-     
+      StringBuffer message = new StringBuffer("The words in reverse order are\n");
+
       entry = JOptionPane.showInputDialog(null,
         "Enter any word\n" +
-        "Enter " + STOP " when you want to stop"); 
-      while(!(entry.equals(STOP))
+        "Enter " + STOP + " when you want to stop");
+      while(!(entry.equals(STOP)))
       {
-         array[STOP] = entry;
-         entry = JOptionPane.showinputDialog(null,
+         entry = JOptionPane.showInputDialog(null,
             "Enter another word\n" +
-            "Enter " + STOP + " when you want to stop"); 
+            "Enter " + STOP + " when you want to stop");
+         ++x;
+         array[x] = entry;
+         System.out.println(array[x]);
       }
-      for(y = 0; y > 0; ++y);
+      for(y = array.length; y > 0; --y);
       {
          message.append(array[y]);
          message.append("\n");
@@ -30,4 +31,3 @@ public class DebugEight4
       JOptionPane.showMessageDialog(null, message);
    }
 }
-
