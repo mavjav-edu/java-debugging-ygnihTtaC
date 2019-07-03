@@ -7,23 +7,20 @@ public class DebugEight4
    {
       int x = 0, y;
       String array[] = new String[100];
-      String entry;
+      String entry = new String();
       final String STOP = "XXX";
       StringBuffer message = new StringBuffer("The words in reverse order are\n");
 
-      entry = JOptionPane.showInputDialog(null,
-        "Enter any word\n" +
-        "Enter " + STOP + " when you want to stop");
+
       while(!(entry.equals(STOP)))
       {
          entry = JOptionPane.showInputDialog(null,
             "Enter another word\n" +
             "Enter " + STOP + " when you want to stop");
-         ++x;
-         array[x] = entry;
-         System.out.println(array[x]);
+         array[x++] = entry;
+         System.out.println(array[x-1]);
       }
-      for(y = array.length; y > 0; --y);
+      for(y = x-2; y >= 0; --y)
       {
          message.append(array[y]);
          message.append("\n");
