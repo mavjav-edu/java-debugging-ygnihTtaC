@@ -26,7 +26,7 @@ public class DebugNine3
          entry = input.nextLine();
       }
    }
-   public static void display(ArrayList products)
+   public static void display(ArrayList<String> products)
    {
       System.out.println("\nThe size of the list is " + products.size());
       for(int x = 0; x < products.size(); ++x)
