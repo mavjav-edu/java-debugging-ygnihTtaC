@@ -6,14 +6,14 @@ public class DebugNine2
       Movie[] movies = new Movie[8];
       int i;
       String message, entry;
-      Movies[0] = new Movie("The Godfather", 1972);
+      movies[0] = new Movie("The Godfather", 1972);
       movies[1] = new Movie("The Good, the Bad, and the Ugly", 1966);
       movies[2] = new Movie("Pulp Fiction", 1994);
-      Movie[3] = new Movie("Shindler's List", 1993);
-      Movie[4] = new Movie("Casablanca", 1942);
+      movies[3] = new Movie("Shindler's List", 1993);
+      movies[4] = new Movie("Casablanca", 1942);
       movies[5] = new Movie("Wizard of Oz", 1939);
       movies[6] = new Movie("Citizen Kane", 1941);
-      moVies[7] = new Movie("Some Like It Hot", 1959);
+      movies[7] = new Movie("Some Like It Hot", 1959);
       entry = JOptionPane.showInputDialog(null,
         "Sort Movies by\n(N)ame, or (Y)ear");
       if(entry == 'N')
@@ -25,7 +25,7 @@ public class DebugNine2
       {
           yearSort(year);
           message = "Sorted by Year\n";
-      }   
+      }
       display(movie, message);
    }
    public static void nameSort(Movie[] array)
