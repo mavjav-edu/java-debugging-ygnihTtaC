@@ -3,7 +3,7 @@ public class DebugCustomer
     protected int idNumber;
     protected String name;
     protected double creditLimit;
-    public DebugCustomer(int id, String name, double credit)
+    public void DebugCustomer(int id, String name, double credit)
     {
        idNumber = id;
        this.name = name;
