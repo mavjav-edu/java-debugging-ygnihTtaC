@@ -1,5 +1,6 @@
 // A Vacation is 10 days
 // but an ExtendedVacation is 30 days
+//Fixed
 public class DebugTen2
 {
    public static void main(String args[])
