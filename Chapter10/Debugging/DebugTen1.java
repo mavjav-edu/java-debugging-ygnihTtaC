@@ -5,10 +5,9 @@ public class DebugTen1
 {
    public static void main(String args[])
    {
-      DebugPlay performance1 = 
-        DebugPlay("Death of a Salesman", "Arthur Miller");
-      DebugMusical performance2 =  
-        DebugMusical("Guys and Dolls", "Jo Swerling", "Frank Loesser");
+      DebugPlay performance1 = new DebugPlay();
+      performance1.FixDebugPlay("Death of a Salesman", "Arthur Miller");
+      DebugMusical performance2 = new DebugMusical("Guys and Dolls", "Jo Swerling", "Frank Loesser");
       performance1.display();
       performance2.display();
    }
