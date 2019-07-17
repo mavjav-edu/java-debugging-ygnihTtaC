@@ -1,15 +1,21 @@
 public class DebugPlay
 {
-   public String title;
-   public String author;
+   protected String title;
+   protected String author;
 
-   public void FixDebugPlay(String title, String author)
+   public DebugPlay()
+   {
+      this.title = "";
+      this.author = "";
+   }
+
+   public DebugPlay(String title, String author)
    {
       this.title = title;
       this.author = author;
    }
    public void display()
    {
-      System.out.println("The performance is " + title + " by " + author);
+      System.out.println("The performance is '" + title + "' by " + author);
    }
 }

@@ -9,8 +9,8 @@ public class DebugTen3
       area = JOptionPane.showInputDialog(null,  "Enter city for phone book");
       inStr = JOptionPane.showInputDialog(null, "Enter number of pages in " + area + "'s phone book");
       pages = Integer.parseInt(inStr);
-      DebugPhoneBook pb = new DebugPhoneBook();
-      pb.FixDebugPhoneBook(pages, area);
+      DebugPhoneBook pb = new DebugPhoneBook(pages, area);
+      //pb.FixDebugPhoneBook(pages, area);
       pb.display();
    }
 }
