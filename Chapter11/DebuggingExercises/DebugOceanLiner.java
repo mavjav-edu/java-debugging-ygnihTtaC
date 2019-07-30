@@ -6,11 +6,11 @@ public class DebugOceanLiner extends DebugBoat
       setPassengers();
       setPower();
    }
-   public void setPassengers()
+   protected void setPassengers()
    {
       super.passengers = 2400;
    }
-   public void setPower()
+   protected void setPower()
    {
       super.power = "four engines";
    }

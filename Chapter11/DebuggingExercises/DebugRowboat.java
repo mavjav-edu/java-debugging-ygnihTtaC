@@ -6,11 +6,11 @@ public class DebugRowboat extends DebugBoat
       setPassengers();
       setPower();
    }
-   public void setPassengers()
+   protected void setPassengers()
    {
       super.passengers = 2;
    }
-   public void setPower()
+   protected void setPower()
    {
       super.power = "oars";
    }

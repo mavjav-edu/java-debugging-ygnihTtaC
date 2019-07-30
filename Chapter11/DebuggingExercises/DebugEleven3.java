@@ -11,6 +11,6 @@ public class DebugEleven3
       if(redBoat.equals(blueBoat))
          System.out.println(" equal");
       else
-	 System.out.println(" not equal");
+	       System.out.println(" not equal");
    }
 }

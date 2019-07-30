@@ -12,9 +12,9 @@ public class DebugEleven2
       ref[2] = bigBoat;
       for(int x = 0; x < ref.length; ++x)
       {
-         ref[x].setPassengers();
+         /*ref[x].setPassengers();
          ref[x].setPower();
-         ref[x].toString();
+         ref[x].toString();*/
          System.out.println(ref[x]);
       }
    }

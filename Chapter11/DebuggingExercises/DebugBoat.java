@@ -1,8 +1,8 @@
 public abstract class DebugBoat
 {
-   String boatType = new String();
-   int passengers;
-   String power = new String();
+   protected String boatType = new String();
+   protected int passengers;
+   protected String power = new String();
    public DebugBoat(String bt)
    {
       boatType = bt;
@@ -23,6 +23,6 @@ public abstract class DebugBoat
       return("This " + boatType + "boat carries " + passengers +
         " and is powered by " + power);
    }
-   public abstract void setPower();
-   public abstract void setPassengers();
+   protected abstract void setPower();
+   protected abstract void setPassengers();
 }
