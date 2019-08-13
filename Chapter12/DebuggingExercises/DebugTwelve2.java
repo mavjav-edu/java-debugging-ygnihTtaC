@@ -9,15 +9,17 @@ public class DebugTwelve2
       final byte HIGHBYTE = 127;
       try
       {
-         allowed = (byte)(HIGHBYTE - num1);
+         byte allowed = (byte)(HIGHBYTE - num1);
          if(num2 > allowed)
-            throw(new Arithmeticexception());
+          {
+            //throw(new ArithmeticException());
+          }
          result = (byte)(num1 + num2);
          System.out.println("Result is " + result);
       }
       catch(ArithmeticException error)
       {
-         System.out.println("Byte can't hold value higher than " + HIGHBYT);
+         System.out.println("Byte can't hold value higher than " + HIGHBYTE);
       }
    }
 }

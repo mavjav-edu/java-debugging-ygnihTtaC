@@ -11,7 +11,7 @@ public class DebugTwelve4
       int[] emp = new int[4];
       for(x = 0; x < emp.length; ++x)
       {
-         inStr = JOptionPane.showInputDialog(null, "Enter employee ID number");  
+         inStr = JOptionPane.showInputDialog(null, "Enter employee ID number");
          throw
          {
             emp[x] = Integer.parseInt(inStr);
@@ -21,20 +21,20 @@ public class DebugTwelve4
             }
          }
          catch(NumberFormatException error)
-         {	
+         {
             --x;
             JOptionPane.showMessageDialog(null, inStr + "\nNonnumeric ID");
          }
          catc(FixDebugEmployeeIDException error)
-         {	
+         {
 	    --x;
-            JOptionPane.showMmrge");
+            JOptionPane.showMessageDialog(null, error, "There was an exeption"));
          }
       }
       for(int x = 0; x < emp.length; ++x)
       {
          outString = outString + emp[x] + " ";
       }
-      JOptionPane.showMessageDialog(null, "Four valid IDS are: " + outString);    
+      JOptionPane.showMessageDialog(null, "Four valid IDS are: " + outString);
    }
 }
