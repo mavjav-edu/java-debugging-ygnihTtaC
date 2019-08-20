@@ -8,11 +8,11 @@ public class DebugThirteen3
    public static void main(String[] args)
    {
       Path file =
-         Paths.get("C:\\Java\\Chapter.13\\DebugData4.txt");
-      Scanner kb = new Scanner();
+         Paths.get("DebugData4.txt");
+      Scanner kb = new Scanner(System.in);
       String[] array = new String[2];
       String string = "";
-      String delimiter = ",";
+      String delimiter = ", ";
       String entree;
       String price;
       final String QUIT = "ZZZ";
@@ -20,7 +20,7 @@ public class DebugThirteen3
       {
          OutputStream output = new BufferedOutputStream(Files.newOutputStream(file));
          BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
-         System.out.print("Enter first entree or " + QUIT + " to quit >> ");        
+         System.out.print("Enter first entree or " + QUIT + " to quit >> ");
          entree = kb.nextLine();
          while(!entree.equals(QUIT))
          {
@@ -29,7 +29,7 @@ public class DebugThirteen3
             string = entree + delimiter + price +
               System.getProperty("line.separator");
             writer.write(string, 0, string.length());
-            System.out.print("Enter next entree or " + QUIT + " to quit >> ");        
+            System.out.print("Enter next entree or " + QUIT + " to quit >> ");
             entree = kb.nextLine();
          }
          writer.close();

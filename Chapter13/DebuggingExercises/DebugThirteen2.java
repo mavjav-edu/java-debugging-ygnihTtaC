@@ -11,9 +11,9 @@ public class DebugThirteen2
    public static void main(String[] args)
    {
       Path fileIn =
-         Paths.get("C:\\Java\\Chapter.13\\DebugData3.txt");
+         Paths.get("DebugData3.txt");
       Path fileOut =
-         Paths.get("C:\\Java\\Chapter.13\\DebugData3New.txt");
+         Paths.get("DebugData3New.txt");
       String areaCode = "(312) ";
       String phone;
       InputStream input = null;
@@ -21,11 +21,10 @@ public class DebugThirteen2
       try
       {
          input = Files.newInputStream(fileIn);
-         BufferedReader reader = new BufferedReader
-            (new InputStreamReader(input));
+         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
          output = Files.newOutputStream(fileOut);
          phone = reader.readLine();
-         while(phone == null)
+         while(phone != null)
          {
             phone = areaCode + phone + System.getProperty("line.separator");
             System.out.println(phone);
@@ -34,6 +33,7 @@ public class DebugThirteen2
             phone = reader.readLine();
          }
          input.close();
+         output.close();
        }
        catch (IOException e)
        {
