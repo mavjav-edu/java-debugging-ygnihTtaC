@@ -12,17 +12,18 @@ public class DebugFourteen2 extends JFrame implements ItemListener
    JComboBox<String> payMethod = new JComboBox<String>();
    JLabel payList = new JLabel("Pay List");
    JTextField totFees = new JTextField(25);
-   String pctMsg = new String("per cent will be added to your bill");
+   String pctMsg = new String("percent will be added to your bill");
    int[] fees = {5, 2, 0};
    int feePct = 0;
    String output;
    int fee = 0;
+   private static final long serialVersionUID = 42l;
    public DebugFourteen2()
    {
       super("Pay List");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setLayout(flow);
-      payMethod.addItemListener(payMethod);
+      payMethod.addItemListener(this);
       add(payList);
       add(payMethod);
       payMethod.addItem("Credit card");
@@ -37,13 +38,19 @@ public class DebugFourteen2 extends JFrame implements ItemListener
       cframe.setVisible(true);
    }
    @Override
-   public void itemStateChanged()
+   public void itemStateChanged(ItemEvent payList)
    {
       Object source = payList.getSource();
       if(source == payMethod)
       {
-         int fee = payMethod.getSelectedIndex();
-         feePct = fees[x];
+         int i = payMethod.getSelectedIndex();
+         feePct = fees[i];
+         if(feePct == 0){
+           totFees.setEnabled(false);
+         }
+         else{
+           totFees.setEnabled(true);
+         }
          output = feePct + " " + pctMsg;
          totFees.setText(output);
       }

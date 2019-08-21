@@ -5,20 +5,21 @@ import java.awt.event.*;
 public class DebugFourteen3 extends JFrame implements ItemListener
 {
    FlowLayout flow = new FlowLayout();
-   JComboBox pizzaBox = new JComboBox(null);
+   JComboBox<String> pizzaBox = new JComboBox<String>();
    JLabel toppingList = new JLabel("Topping List");
    JLabel aLabel = new JLabel("Paulos's American Pie");
-   JTextField totPrice = new JTextField(10);
+   JTextField displayPrice = new JTextField(10);
    int[] pizzaPrice = {7, 10, 10, 8, 8, 8, 8};
    int totalPrice = 0;
    String output;
    int pizzaNum;
+   private static final long serialVersionUID = 42l;
    public DebugFourteen3()
    {
       super("Pizza List");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setLayout(flow);
-      pizzaBox.addItemListener();
+      pizzaBox.addItemListener(this);
       add(toppingList);
       pizzaBox.addItem("cheese");
       pizzaBox.addItem("sausage");
@@ -29,24 +30,26 @@ public class DebugFourteen3 extends JFrame implements ItemListener
       pizzaBox.addItem("black olive");
       add(pizzaBox);
       add(aLabel);
+      add(displayPrice);
+      displayPrice.setEditable(false);
    }
    public static void main(String[] arguments)
    {
       JFrame frame = new DebugFourteen3();
-      frame.setSize(200, 150);
-      frame.setVisible();
+      frame.setSize(500, 500);
+      frame.setVisible(true);
    }
 
    @Override
-   public void itemStatechanged(ItemEvent[] list)
+   public void itemStateChanged(ItemEvent list)
    {
-     Object source = toppingList.getSource;
-     if(source = pizzaBox)
+     Object source = list.getSource();
+     if(source == pizzaBox)
      {
         int pizzaNum = pizzaBox.getSelectedIndex();
         totalPrice = pizzaPrice[pizzaNum];
         output = "Pizza Price $" + totalPrice;
-        totPrice.setText(output);
+        displayPrice.setText(output);
      }
    }
 }
