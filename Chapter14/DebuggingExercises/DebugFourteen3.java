@@ -2,15 +2,15 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class DebugFourten3 extends JFrame implements ItemListener
+public class DebugFourteen3 extends JFrame implements ItemListener
 {
    FlowLayout flow = new FlowLayout();
-   JComboBox pizzaBox = new JComboBox();
+   JComboBox pizzaBox = new JComboBox(null);
    JLabel toppingList = new JLabel("Topping List");
    JLabel aLabel = new JLabel("Paulos's American Pie");
    JTextField totPrice = new JTextField(10);
    int[] pizzaPrice = {7, 10, 10, 8, 8, 8, 8};
-   int totalPrice = 0; 
+   int totalPrice = 0;
    String output;
    int pizzaNum;
    public DebugFourteen3()
@@ -20,14 +20,14 @@ public class DebugFourten3 extends JFrame implements ItemListener
       setLayout(flow);
       pizzaBox.addItemListener();
       add(toppingList);
-      pizzaBox.addItem(cheese);
-      pizzaBox.addItem(sausage);
+      pizzaBox.addItem("cheese");
+      pizzaBox.addItem("sausage");
       pizzaBox.addItem("pepperoni");
       pizzaBox.addItem("onion");
       pizzaBox.addItem("green pepper");
       pizzaBox.addItem("green olive");
       pizzaBox.addItem("black olive");
-      add(pizzabox);
+      add(pizzaBox);
       add(aLabel);
    }
    public static void main(String[] arguments)
@@ -40,7 +40,7 @@ public class DebugFourten3 extends JFrame implements ItemListener
    @Override
    public void itemStatechanged(ItemEvent[] list)
    {
-     Object source = list.getSource;
+     Object source = toppingList.getSource;
      if(source = pizzaBox)
      {
         int pizzaNum = pizzaBox.getSelectedIndex();

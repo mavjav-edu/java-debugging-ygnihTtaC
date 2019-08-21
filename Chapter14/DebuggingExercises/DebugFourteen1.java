@@ -12,6 +12,6 @@ public class DebugFourteen1 extends JFrame
    }
    public static void main(String[] args)
    {
-      DebugFourteen1 frame = new DebugFourteen(200);
+      DebugFourteen1 frame = new DebugFourteen1(200);
    }
 }
