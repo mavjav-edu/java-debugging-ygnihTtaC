@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class DebugFifteen4 extends JFrame
+public class DebugFifteen4 extends JFrame implements ActionListener
 {
    JMenuBar mainBar = new JMenuBar();
    JMenu menu1 = new JMenu("File");
@@ -22,20 +22,20 @@ public class DebugFifteen4 extends JFrame
       setLayout(new FlowLayout());
       setJMenuBar(mainBar);
       mainBar.add(menu1);
-      mainBar.add(menu2);   
+      mainBar.add(menu2);
       mainBar.add(menu3);
-      menu1.add(exit)
+      menu1.add(exit);
       menu2.add(animal);
       menu2.add(song);
       menu2.add(flower);
-      menu3.add(Milwaukee);
-      menu3.add(Madison);
+      menu3.add(milwaukee);
+      menu3.add(madison);
       exit.addActionListener(this);
       animal.addActionListener(this);
       song.addActionListener(this);
-      flowmer.addActionListener(this);
-      milwalkee.addActionListener(this);
-      madisin.addActionListener(this);
+      flower.addActionListener(this);
+      milwaukee.addActionListener(this);
+      madison.addActionListener(this);
       add(label1);
       label1.setFont(new Font("Arial", Font.BOLD, 14));
       add(label2);
@@ -51,9 +51,9 @@ public class DebugFifteen4 extends JFrame
       else if(source == animal)
          text = "The state animal is badger";
       else if(source == song)
-         text = "The state song is On Wisconsin!";
+         text = "The state song is \"On Wisconsin!\"";
       else if(source == flower)
-          text = "The state flower is wood violet";
+          text = "The state flower is the Wood Violet";
       else if(source == milwaukee)
          text = "Milwaukee is the largest city";
       else
@@ -61,7 +61,7 @@ public class DebugFifteen4 extends JFrame
       label2.setText(text);
       repaint();
    }
- 
+
    public static void main(String[] args)
    {
       DebugFifteen4 frame = new DebugFifteen4();

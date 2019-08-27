@@ -15,7 +15,7 @@ public class DebugFifteen2 extends JFrame
    public DebugFifteen2()
    {
       con = this.getContentPane();
-      con.setLayout(new BorderLayout())
+      con.setLayout(new BorderLayout());
       con.add(nb);
       con.add(sb);
       con.add(eb);
