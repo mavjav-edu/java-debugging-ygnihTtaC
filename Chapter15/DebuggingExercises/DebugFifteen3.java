@@ -7,7 +7,7 @@ public class DebugFifteen3 extends JFrame implements KeyListener
 {
    private static final long serialVersionUID = 42l;
    char key;
-   Container con = null;
+   Container con = getContentPane();
    GridLayout grid = new GridLayout(2, 1);
    JLabel label = new JLabel("Key Typed:");
    JTextArea textArea = new JTextArea(4, 25);
