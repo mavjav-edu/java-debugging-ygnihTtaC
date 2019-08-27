@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.awt.Color;
 public class DebugFifteen1 extends JFrame implements ActionListener
 {
+   private static final long serialVersionUID = 42l;
    JButton button1 = new JButton("Red");
    JButton button2 = new JButton("Pink");
    JButton button3 = new JButton("Orange");

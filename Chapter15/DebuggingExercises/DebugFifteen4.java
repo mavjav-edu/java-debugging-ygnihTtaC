@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 public class DebugFifteen4 extends JFrame implements ActionListener
 {
+   private static final long serialVersionUID = 42l;
    JMenuBar mainBar = new JMenuBar();
    JMenu menu1 = new JMenu("File");
    JMenu menu2 = new JMenu("Symbols");
@@ -41,6 +42,7 @@ public class DebugFifteen4 extends JFrame implements ActionListener
       add(label2);
       label2.setFont(new Font("Arial", Font.PLAIN, 14));
    }
+   
    @Override
    public void actionPerformed(ActionEvent e)
    {

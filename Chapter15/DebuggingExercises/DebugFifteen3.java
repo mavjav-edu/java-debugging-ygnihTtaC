@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.awt.*;
 public class DebugFifteen3 extends JFrame implements KeyListener
 {
+   private static final long serialVersionUID = 42l;
    char key;
    Container con = null;
    GridLayout grid = new GridLayout(2, 1);
