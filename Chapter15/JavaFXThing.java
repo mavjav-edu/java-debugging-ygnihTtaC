@@ -1,7 +1,7 @@
-import javafx.graphics.application.Application;
-import javafx.graphics.scene.Scene;
-import javafx.graphics.scene.layout.AnchorPane;
-import javafx.graphics.stage.Stage;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import java.net.URL;
 
 public class JavaFXThing extends Application{
