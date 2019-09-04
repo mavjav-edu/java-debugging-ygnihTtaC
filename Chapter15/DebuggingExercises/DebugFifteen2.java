@@ -1,8 +1,8 @@
 // Demonstrates layout positions
 // using BorderLayout
 import javax.swing.*;
-/*import java.awt.*;
-import java.awt.event.*;*/
+import java.awt.*;
+import java.awt.event.*;
 public class DebugFifteen2 extends JFrame
 {
    private static final long serialVersionUID = 42l;

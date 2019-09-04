@@ -1,4 +1,4 @@
-import javafx.graphics.application.Application;
+/*import javafx.graphics.application.Application;
 import javafx.graphics.scene.Scene;
 import javafx.graphics.scene.layout.AnchorPane;
 import javafx.graphics.stage.Stage;
@@ -23,3 +23,4 @@ public class JavaFXThing extends Application{
   }
 
 }
+*/
