@@ -6,7 +6,7 @@ import java.awt.Color;
 import java.awt.event.*;
 public class DebugSixteen4 extends JPanel implements ActionListener
 {
-   JLabel header = new JLabel("Outfit planner);
+   JLabel header = new JLabel("Outfit planner");
    JButton changeButton = new JButton("Change clothes");
    int counter = 0;
    int xTop[] = { 20, 40, 50, 60, 80, 75, 62, 66, 40, 38, 25, 20};
@@ -37,7 +37,7 @@ public class DebugSixteen4 extends JPanel implements ActionListener
       g.drawString("Just look at the colors", X, y);
       g.drawString("in which you can buy", X, y += GAP);
       g.drawString("this beautiful shirt", X, y += GAP);
-      g.drawString("Only $" + PRICE, X, y += GAP);
+      g.drawString("Only $" + price, X, y += GAP);
    }
    @Override
    public void actionPerformed(ActionEvent e)
