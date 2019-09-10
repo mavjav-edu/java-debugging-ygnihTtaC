@@ -1,7 +1,11 @@
-import javafx.graphics.application.Application;
-import javafx.graphics.scene.Scene;
-import javafx.graphics.scene.layout.AnchorPane;
-import javafx.graphics.stage.Stage;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.net.URL;
 
 public class JavaFXThing extends Application{

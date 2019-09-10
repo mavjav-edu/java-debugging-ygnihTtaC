@@ -8,6 +8,7 @@ import java.awt.event.*;
 
 public class DebugSixteen3 extends JPanel implements ActionListener
 {
+  private static final long serialVersionUID = 42l;
    JLabel firstText = new JLabel("Our company is growing!");
    JLabel secText = new JLabel("What makes us better that most?");
    JButton findOutButton = new JButton("Find Out");
@@ -24,16 +25,16 @@ public class DebugSixteen3 extends JPanel implements ActionListener
      setBackground(Color.PINK);
      add(firstText);
      add(secText);
-     add (findOutButton);
-     findOutbutton.addActionListener(this);
+     add(findOutButton);
+     findOutButton.addActionListener(this);
    }
 
    @Override
    public void actionPerformed(ActionEvent e)
    {
       ++counter;
-      if(counter < reason.length)
-         findOutButton.setEnabled(false);        
+      if(counter > reason.length)
+         findOutButton.setEnabled(false);
    }
    @Override
    public void paintComponent(Graphics g)
@@ -42,11 +43,11 @@ public class DebugSixteen3 extends JPanel implements ActionListener
        g.setColor(Color.BLUE);;
        for(int i = 0; i < counter; ++i)
          g.drawString(reason[i], x, y += GAP);
-    }   
+    }
    public static void main(String[] args)
    {
       JFrame frame = new JFrame();
-      frame.add(new DebugSixteen3);
+      frame.add(new DebugSixteen3());
       frame.setSize(350, 250);
       frame.setVisible(true);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

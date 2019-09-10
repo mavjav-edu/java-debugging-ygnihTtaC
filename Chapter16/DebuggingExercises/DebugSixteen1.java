@@ -5,6 +5,7 @@ import java.awt.Color;
 
 public class DebugSixteen1 extends JPanel
 {
+   private static final long serialVersionUID = 42l;
    String msg = "This is a bull's eye";
    int radius, corner;
    public DebugSixteen1()
@@ -26,6 +27,7 @@ public class DebugSixteen1 extends JPanel
          else
             gr.setColor(Color.BLUE);
          gr.drawOval(corner, corner, radius, radius);
+         corner -= 3;
       }
       gr.setFont(new Font("Arial", Font.ITALIC, 20));
       gr.setColor(Color.BLACK);
@@ -36,6 +38,7 @@ public class DebugSixteen1 extends JPanel
       JFrame frame = new JFrame();
       frame.add(new DebugSixteen1());
       frame.setSize(340, 340);
+      frame.setVisible(true);
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
 }

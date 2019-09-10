@@ -9,12 +9,13 @@ import java.awt.event.*;
 
 public class DebugSixteen2 extends JPanel implements MouseListener
 {
+  private static final long serialVersionUID = 42l;
    int x, y;
    int size;
 
    public DebugSixteen2()
    {
-      addMouseListener();
+      addMouseListener(this);
    }
    public static void main(String[] args)
    {
@@ -29,26 +30,30 @@ public class DebugSixteen2 extends JPanel implements MouseListener
    public void mousePressed(MouseEvent e)
    {
       x = e.getX();
-      y = e.gety();
+      y = e.getY();
    }
 
    @Override
    public void mouseClicked(MouseEvent e)
    {
-      if(e.getClickCount() == 2)
+      //System.out.println("mouseClicked");
+      if(e.getClickCount() == 1)
         size = 20;
       else
-        size = 20;
+        size = size - 1;
      repaint();
    }
    @Override
    public void mouseEntered(MouseEvent e)
    {
+      //System.out.println("mouseEntered");
       setBackground(Color.ORANGE);
+
    }
    @Override
    public void mouseExited(MouseEvent e)
    {
+      setBackground(Color.WHITE);
    }
    @Override
    public void mouseReleased(MouseEvent e)
