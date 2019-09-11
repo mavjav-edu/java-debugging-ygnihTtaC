@@ -33,16 +33,19 @@ public class DebugSixteen3 extends JPanel implements ActionListener
    public void actionPerformed(ActionEvent e)
    {
       ++counter;
-      if(counter > reason.length)
+      if(counter >= reason.length)
          findOutButton.setEnabled(false);
+      repaint();
    }
    @Override
    public void paintComponent(Graphics g)
    {
+       super.paintComponent(g);
        g.setFont(boldFont);
        g.setColor(Color.BLUE);;
        for(int i = 0; i < counter; ++i)
          g.drawString(reason[i], x, y += GAP);
+       System.out.println("in paintComponent");
     }
    public static void main(String[] args)
    {
