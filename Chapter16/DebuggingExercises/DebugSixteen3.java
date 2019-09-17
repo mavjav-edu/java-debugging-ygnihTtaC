@@ -17,7 +17,7 @@ public class DebugSixteen3 extends JPanel implements ActionListener
         "Our committment","Our service","YOU!!"};
    Font boldFont =new Font("TimesRoman", Font.BOLD, 20);
    final int GAP = 20;
-   int x = 30, y = 50;
+   final int x = 30;
    int counter = 0;
 
    public DebugSixteen3()
@@ -40,12 +40,13 @@ public class DebugSixteen3 extends JPanel implements ActionListener
    @Override
    public void paintComponent(Graphics g)
    {
+       int y = 50;
        super.paintComponent(g);
        g.setFont(boldFont);
-       g.setColor(Color.BLUE);;
+       g.setColor(Color.BLUE);
        for(int i = 0; i < counter; ++i)
-         g.drawString(reason[i], x, y += GAP);
-       System.out.println("in paintComponent");
+         g.drawString(reason[i], x, y += 20);
+       //System.out.println("in paintComponent");
     }
    public static void main(String[] args)
    {

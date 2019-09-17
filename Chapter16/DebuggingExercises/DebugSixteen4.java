@@ -15,7 +15,7 @@ public class DebugSixteen4 extends JPanel implements ActionListener
    Font font = new Font("Arial", Font.BOLD, 14);
    final double price = 39.95;
    final int X = 100;
-   int y = 80;
+
    final int GAP = 20;
    int cycle = 0;
    public DebugSixteen4()
@@ -28,6 +28,7 @@ public class DebugSixteen4 extends JPanel implements ActionListener
    @Override
    public void paintComponent(Graphics g)
    {
+     int y = 80;
       super.paintComponent(g);
       ++counter;
       g.setFont(font);

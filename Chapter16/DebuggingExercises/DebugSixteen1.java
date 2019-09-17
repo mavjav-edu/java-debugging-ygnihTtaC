@@ -16,7 +16,7 @@ public class DebugSixteen1 extends JPanel
    public void paintComponent(Graphics gr)
    {
       super.paintComponent(gr);
-      for(corner = 150, radius = 2; radius < 200; radius += 6)
+      for(corner = 150, radius = 2; radius < 200; radius += 2)
       {
          if(radius < 50)
             gr.setColor(Color.RED);
@@ -27,7 +27,7 @@ public class DebugSixteen1 extends JPanel
          else
             gr.setColor(Color.BLUE);
          gr.drawOval(corner, corner, radius, radius);
-         corner -= 3;
+         corner -= 1;
       }
       gr.setFont(new Font("Arial", Font.ITALIC, 20));
       gr.setColor(Color.BLACK);
